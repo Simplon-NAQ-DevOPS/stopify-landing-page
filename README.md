@@ -26,3 +26,21 @@ CTRL+C ou `docker-compose down`
 
 ### Changer la version d'hugo installée dans l'image Docker
 \\ À écrire \\
+
+## Épisode 2 - Procédure d'Intégration et Déploiement Continu sur GitHub Pages
+
+1.  Lire "[A propos de l'intrégration continue](https://docs.github.com/en/actions/guides/about-continuous-integration)"
+2.  Lire et regarder la page à propose de [GitHub Pages](https://pages.github.com/)
+3.  Forker ce dépôt afin de pouvoir effectuer des modifications sur votre nouveau dépôt
+4.  Via l'interface web de github, passer votre dépôt en public (sinon, impossible de publier sur GitHub Pages)
+5.  Créer une nouvelle branche sur votre dépôt
+6.  Pusher cette nouvelle branche sur votre dépôt
+7.  Placer le fichier `build.yml` dans le bon sous-dossier de workflow github.
+8.  Commiter et pusher votre branche
+9.  Dans l'onglet "Actions" de votre dépôt sur github.com, vous devriez voir l'action être exécutée
+10. Allez essayer votre nouveau site sur l'url `https://<votreid>.github.io/stopify-landing-page/`. Quelque chose cloche. Quoi ?
+11. Changer la propriété `baseURL` pour la valeur `/stopify-landing-page/` dans le fichier `website/config/_default/config.yml`
+12. Commit et pusher
+13. Vérifier le bon fonctionnement du site
+14. Changer la version de hugo utilisée lors de la procédure de CI afin d'utiliser la dernière version `0.83.0`
+15. Commiter et pusher
