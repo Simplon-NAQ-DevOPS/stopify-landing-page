@@ -35,7 +35,7 @@ Le fichier `.github/workflows/gh-pages.yml` définis les actions effectuées :
   - est lancé sur un container unbuntu
   - fait un git checkout
   - configure hugo dans la version définie via la variable `hugo-version`
-  - lance la commande `hugo --minify -e github-pages -s website` pour générer les fichiers html en précisant qu'il s'agit de l'environnement hugo `gh-pages`
+  - lance la commande `hugo --minify -e gh-pages -s website` pour générer les fichiers html en précisant qu'il s'agit de l'environnement hugo `gh-pages`
   - déploie le contenu du dossier website/public contenant les fichiers html (générés par la commande précédente) sur github pages
 
 //WIP// À faire :
