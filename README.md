@@ -25,7 +25,7 @@ Un service nommé `dev_server` est défini dans le fichier docker-compose.yml.
 ### Comment stopper l'environnement de dev
 CTRL+C ou `docker-compose down`
 
-### Changer la version d'hugo installée dans l'image Docker
+### Changer la version d'hugo installée dans l'image Docke
 \\ À écrire \\
 
 ## Procédure d'Intégration et Déploiement Continu sur GitHub Pages
@@ -64,3 +64,12 @@ Si vous voyez une erreur 404 "There isn't a GitHub Pages site here." il y a 2 pr
 #### Erreur d'affichages des images
 Si le FQDN GitHub Pages ne correspond pas à celui configuré comme `baseURL` dans hugo, il se peut que les images ne s'affichent pas correctement.
 Changer la propriété `baseURL` pour la valeur correspondant dans le fichier `website/config/gh-pages/config.yml`
+
+
+Pour Changer la version d'Hugo, il faut aller dans le dossier docker-image puis _scripts et modifier le fichier hugo.sh en remplaçant le numéro de version par le numéro de version la plus récente. Il faut l'enregistrer localement puis faire un commit et un push dans github :
+
+    git status pour voir le status
+    git add pour ajouter notre fichier modifié
+    git commit pour valider nos modifications
+    on termine avec un git push vers notre url github
+
