@@ -26,8 +26,8 @@ CTRL+C ou `docker-compose down`
 
 ### Changer la version d'hugo installée dans l'image Docker
 
-Se positionner dans le dossier docker-image et ouvrir le fichier hugo.sh
-Modifier le numero de version de HUGO_VERSION (0.85 au lieu de 0.81).
+Se positionner dans le dossier docker-image>_Script et ouvrir le fichier hugo.sh
+Editer le fichier hugo.sh via la commande vi et Modifier le numero de version de HUGO_VERSION (0.85 au lieu de 0.81).
 Stoper le conteneur docker en cours d'éxecution 
 Relancer docker avec la commande "docker-compose up -d"
 lancer le shell du container docker  avec la commande "docker exec -ti stopify-landing-page_dev_server_1 /bin/sh".
