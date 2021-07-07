@@ -25,4 +25,10 @@ Un service nommé `dev_server` est défini dans le fichier docker-compose.yml.
 CTRL+C ou `docker-compose down`
 
 ### Changer la version d'hugo installée dans l'image Docker
-\\ À écrire \\
+
+Pour Changer la version d'Hugo, il faut aller dans le dossier docker-image puis _scripts et modifier le fichier hugo.sh en remplaçant le numéro de version par le numéro de version la plus récente. Il faut l'enregistrer localement puis faire un commit et un push dans github :
+
+    git status pour voir le status
+    git add pour ajouter notre fichier modifié
+    git commit pour valider nos modifications
+    on termine avec un git push vers notre url github
