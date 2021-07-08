@@ -1,4 +1,4 @@
-# landing-page
+# landing-page *****************
 ## Présentation
 Le mini site de l'entreprise contient 2 pages :
 - la page d'acceuil
