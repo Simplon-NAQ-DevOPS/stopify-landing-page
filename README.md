@@ -6,6 +6,7 @@ Le mini site de l'entreprise contient 2 pages :
 
 Le site est généré par le framework [hugo](https://gohugo.io/) et le thème utilisé est [bigspring](https://themes.gohugo.io/bigspring-hugo-startup-theme/).
 Les sources du site sont présentes dans le dossier nommé `website`.
+#TEST AJOUT POUR OBTENIR UNE MODIF 
 
 ## Procédures
 ### Faire tourner le site en local (préproduction)
@@ -24,6 +25,7 @@ Un service nommé `dev_server` est défini dans le fichier docker-compose.yml.
 ### Comment stopper l'environnement de dev
 CTRL+C ou `docker-compose down`
 
+<<<<<<< HEAD:README2.md
 ### Changer la version d'hugo installée dans l'image Docker
 <<<<<<< HEAD
 
@@ -34,6 +36,9 @@ Pour Changer la version d'Hugo, il faut aller dans le dossier docker-image puis 
     git commit pour valider nos modifications
     on termine avec un git push vers notre url github
 =======
+=======
+### Changer la version d'hugo installée dans l'image Docke
+>>>>>>> 8308e8ce3b37bee4cd183474417f6b0bf9d7d296:README.md
 \\ À écrire \\
 
 ## Procédure d'Intégration et Déploiement Continu sur GitHub Pages
@@ -72,4 +77,16 @@ Si vous voyez une erreur 404 "There isn't a GitHub Pages site here." il y a 2 pr
 #### Erreur d'affichages des images
 Si le FQDN GitHub Pages ne correspond pas à celui configuré comme `baseURL` dans hugo, il se peut que les images ne s'affichent pas correctement.
 Changer la propriété `baseURL` pour la valeur correspondant dans le fichier `website/config/gh-pages/config.yml`
+<<<<<<< HEAD:README2.md
 >>>>>>> 9bed2ee5552be6e6ea9351bad33dfc6b7cc86c78
+=======
+
+
+Pour Changer la version d'Hugo, il faut aller dans le dossier docker-image puis _scripts et modifier le fichier hugo.sh en remplaçant le numéro de version par le numéro de version la plus récente. Il faut l'enregistrer localement puis faire un commit et un push dans github :
+
+    git status pour voir le status
+    git add pour ajouter notre fichier modifié
+    git commit pour valider nos modifications
+    on termine avec un git push vers notre url github
+
+>>>>>>> 8308e8ce3b37bee4cd183474417f6b0bf9d7d296:README.md
