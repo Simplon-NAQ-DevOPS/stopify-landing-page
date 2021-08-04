@@ -1,0 +1,46 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.86.0'
+          extended: true
+
+      - name: Build
+        run: hugo --minify -e gh-pages -s website
+
+        name: Build S3
+        run: hugo --minify -e s3 -s website
+
+deployment:
+     targets:
+           name : "Stopify"
+     URL : "stopify-20210804071346562200000001.s3-website.eu-west-3"
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+          name: Deploy S3
+             run: hugo deploy -e s3 -s website
+             env:
+              AWS_REGION: 'eu-west-3'
+              AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+              AWS_SECRET_ACCESS_KEY: {{ secrets.AWS_SECRET_ACCESS_KEY }}
